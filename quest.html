@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+    <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Определение падежей</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        animation: {
+                            'fade-in': 'fade-in 0.5s ease-in-out',
+                        },
+                        keyframes: {
+                            'fade-in': {
+                                '0%': { opacity: '0' },
+                                '100%': { opacity: '1' },
+                            },
+                        },
+                    },
+                },
+            }
+        </script>
+    </head>
+    <body class="bg-gray-50 flex items-center justify-center h-screen">
+        <button onclick="location.href='index.html'" 
+                    class="absolute top-4 left-4 px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-transform transform hover:scale-105">
+                На главную
+            </button>
+        <div id="app" class="w-full max-w-md p-4 bg-white shadow-lg rounded-lg text-center relative">
+            <!-- Кнопка выхода -->
+            
+            
+            <!-- Вопросы -->
+            <h1 id="question" class="text-xl font-semibold text-blue-600 animate-fade-in mb-6">
+                Сөз кім? не? сұрағына жауап береді ме?
+            </h1>
+            <div class="space-y-4">
+                <button onclick="nextQuestion(true)" class="w-full py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-transform transform hover:scale-105">ИӘ</button>
+                <button onclick="nextQuestion(false)" class="w-full py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-transform transform hover:scale-105">ЖОҚ</button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+    </html>
+    
